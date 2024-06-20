@@ -9,13 +9,13 @@ And make sure your terminal has Full Disk Access
 
 Note: I recommend using a GPU for faster training and performance. I only have CPU and training took ages lol
 
-If you're using a mac, go to System Preferences > Security & Privacy > Privacy > Full Disk Access on the side bar. Click the lock icon to make changes and check the 'Terminal' box. Click the lock icon again to save changes.
+If you're using a mac, go to System Preferences > Security & Privacy > Privacy > Full Disk Access on the side bar. Click the lock icon to make changes and check the `Terminal` box. Click the lock icon again to save changes.
 
-1) git clone 
-cd 
+1) `git clone` 
+`cd` 
 
 2) Extract Your iMessages to CSV
-The iMessages database is located at '~/Library/Messages/chat.db'. To access this database, open terminal on your mac and run: 'sqlite3 ~/Library/Messages/chat.db'. 
+The iMessages database is located at `~/Library/Messages/chat.db`. To access this database, open terminal on your mac and run: `sqlite3 ~/Library/Messages/chat.db`. 
 
 I extracted my message convos with one person by putting this SQL Query in the terminal:
 ```
@@ -41,7 +41,7 @@ WHERE
 ORDER BY
     message.date;
 ```
-Open 'messages_history.csv' or the csv with the data retrieved and double check that there are date, sender_name, and content columns.
+Open `messages_history.csv` or the csv with the data retrieved and double check that there are date, sender_name, and content columns.
 
 3) Create a virtual environment and install the required libraries.
 ```
@@ -50,11 +50,11 @@ source .venv/bin/activate
 pip install pandas scikit-learn torch transformers tqdm tensorboardX
 ```
 
-4) Run the 'prepare_data.py' script to preprocess and split the data:
+4) Run the `prepare_data.py` script to preprocess and split the data:
 ```
 python prepare_data.py
 ```
-This script will generate 'train.csv' and 'val.csv' files from 'messages_history.csv'
+This script will generate 'train.csv' and `val.csv` files from `messages_history.csv`
 
 If you are using a GPU and want to enable fp16 with Apex:
 - Install Apex
@@ -63,9 +63,9 @@ git clone https://github.com/NVIDIA/apex.git
 cd apex
 pip install -v --no-cache-dir ./
 ```
-- Set 'self.fp16 = True' in train.py
+- Set `self.fp16 = True` in `train.py`
 
-5) Run the 'train.py' script to fine-tune the model:
+5) Run the `train.py` script to fine-tune the model:
 ```
 python train.py
 ```
