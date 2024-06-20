@@ -15,7 +15,7 @@ If you're using a mac, go to System Preferences > Security & Privacy > Privacy >
 cd 
 
 2) Extract Your iMessages to CSV
-The iMessages database is located at ~/Library/Messages/chat.db. To access this database, open terminal on your mac and run: sqlite3 ~/Library/Messages/chat.db. 
+The iMessages database is located at '~/Library/Messages/chat.db'. To access this database, open terminal on your mac and run: 'sqlite3 ~/Library/Messages/chat.db'. 
 
 I extracted my message convos with one person by putting this SQL Query in the terminal:
 ```
@@ -50,11 +50,11 @@ source .venv/bin/activate
 pip install pandas scikit-learn torch transformers tqdm tensorboardX
 ```
 
-4) Run the prepare_data.py script to preprocess and split the data:
+4) Run the 'prepare_data.py' script to preprocess and split the data:
 ```
 python prepare_data.py
 ```
-This script will generate train.csv and val.csv files from messages_history.csv
+This script will generate 'train.csv' and 'val.csv' files from 'messages_history.csv'
 
 If you are using a GPU and want to enable fp16 with Apex:
 - Install Apex
@@ -65,7 +65,7 @@ pip install -v --no-cache-dir ./
 ```
 - Set 'self.fp16 = True' in train.py
 
-5) Run the train.py script to fine-tune the model:
+5) Run the 'train.py' script to fine-tune the model:
 ```
 python train.py
 ```
