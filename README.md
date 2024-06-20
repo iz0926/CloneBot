@@ -75,13 +75,13 @@ The chatbot in this project is fine-tuned using the DialoGPT model, which is a v
 
 GPT-2 is based on the Transformer architecture, and DialoGPT is a variant of GPT-2 specifically fine-tuned on a large dataset of dialogue interactions.
 
-(*) Data Extraction: The chat data is extracted from the iMessages database (chat.db) using an SQL query. The data includes columns for date, sender name, and message content. The extracted data is saved in a CSV file (messages_history.csv) for further processing.
-(*) Pre-processing: prepare_data.py processes the raw data and splits it into training (train.csv) and validation (val.csv) datasets.
-(*) Tokenizer: The input text is tokenized using the AutoTokenizer from the Hugging Face Transformers library. This converts the text into numerical tokens that the model can process.
-(*) ConversationDataset: This class constructs input sequences by concatenating previous dialogue turns with the current response.
-(*) Training Loop: The train.py script handles the fine-tuning process. It includes a training loop that iterates over the dataset, updating the model weights to minimize the loss.
-(*) Optimization: The AdamW optimizer and a learning rate scheduler are used to optimize the model parameters. Gradient accumulation is employed to handle large batches that may not fit into memory.
-(*) Validation: The model's performance is evaluated on the validation dataset at regular intervals during training. We use loss and perplexity to model progress.
+* Data Extraction: The chat data is extracted from the iMessages database (chat.db) using an SQL query. The data includes columns for date, sender name, and message content. The extracted data is saved in a CSV file (messages_history.csv) for further processing.
+* Pre-processing: prepare_data.py processes the raw data and splits it into training (train.csv) and validation (val.csv) datasets.
+* Tokenizer: The input text is tokenized using the AutoTokenizer from the Hugging Face Transformers library. This converts the text into numerical tokens that the model can process.
+* ConversationDataset: This class constructs input sequences by concatenating previous dialogue turns with the current response.
+* Training Loop: The train.py script handles the fine-tuning process. It includes a training loop that iterates over the dataset, updating the model weights to minimize the loss.
+* Optimization: The AdamW optimizer and a learning rate scheduler are used to optimize the model parameters. Gradient accumulation is employed to handle large batches that may not fit into memory.
+* Validation: The model's performance is evaluated on the validation dataset at regular intervals during training. We use loss and perplexity to model progress.
 Checkpoints: Model checkpoints are saved periodically.
 
 After this is done, we test by generating responses. We can use beam search to improve the quality of the generated responses by considering multiple potential outputs.
