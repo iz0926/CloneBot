@@ -2,7 +2,7 @@
 
 The process of building, fine-tuning, and training a chatbot model using Microsoft's DialoGPT and your own iMessages. The steps include extracting messages from iMessages, processing the data, and fine-tuning the model on the extracted data.
 
-Adapted from this article about Rick Sanchez Bot: https://towardsdatascience.com/make-your-own-rick-sanchez-bot-with-transformers-and-dialogpt-fine-tuning-f85e6d1f4e30 
+Adapted from this article about Rick Sanchez Bot: https://towardsdatascience.com/make-your-own-rick-sanchez-bot-with-transformers-and-dialogpt-fine-tuning-f85e6d1f4e30 and this article about fine-tuning DialoGPT: https://nathancooper.io/i-am-a-nerd/chatbot/deep-learning/gpt2/2020/05/12/chatbot-part-1.html
 
 Before starting, make sure you have these: Python 3.8+, pip, SQLite3, Git
 And make sure your terminal has Full Disk Access
