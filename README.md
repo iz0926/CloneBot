@@ -23,7 +23,7 @@ I extracted my message convos with one person by putting this SQL Query in the t
 .mode csv
 .output messages_history.csv
 --replace 'messages_history.csv' with whatever you want to call your csv file
---good to put the path to messages_history.csv file
+--put the path to messages_history.csv file or its location
 SELECT
     datetime(message.date / 1000000000 + strftime('%s', '2001-01-01'), 'unixepoch', 'localtime') AS date,
     CASE
@@ -75,8 +75,8 @@ The chatbot in this project is fine-tuned using the DialoGPT model, which is a v
 
 GPT-2 is based on the Transformer architecture, and DialoGPT is a variant of GPT-2 specifically fine-tuned on a large dataset of dialogue interactions.
 
-* Data Extraction: The chat data is extracted from the iMessages database (chat.db) using an SQL query. The data includes columns for date, sender name, and message content. The extracted data is saved in a CSV file (messages_history.csv) for further processing.
-* Pre-processing: prepare_data.py processes the raw data and splits it into training (train.csv) and validation (val.csv) datasets.
+* Data Extraction: The chat data is extracted from the iMessages database (`chat.db`) using an SQL query. The data includes columns for date, sender name, and message content. The extracted data is saved in a CSV file (messages_history.csv) for further processing.
+* Pre-processing: prepare_data.py processes the raw data and splits it into training (`train.csv`) and validation (`val.csv`) datasets.
 * Tokenizer: The input text is tokenized using the AutoTokenizer from the Hugging Face Transformers library. This converts the text into numerical tokens that the model can process.
 * ConversationDataset: This class constructs input sequences by concatenating previous dialogue turns with the current response.
 * Training Loop: The train.py script handles the fine-tuning process. It includes a training loop that iterates over the dataset, updating the model weights to minimize the loss.
