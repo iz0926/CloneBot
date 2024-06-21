@@ -2,11 +2,11 @@
 
 The process of building, fine-tuning, and training a chatbot model using Microsoft's DialoGPT and your own iMessages. The steps include extracting messages from iMessages, processing the data, and fine-tuning the model on the extracted data.
 
-Sources: 
-https://huggingface.co/blog/how-to-generate
-https://towardsdatascience.com/make-your-own-rick-sanchez-bot-with-transformers-and-dialogpt-fine-tuning-f85e6d1f4e30
-https://nathancooper.io/i-am-a-nerd/chatbot/deep-learning/gpt2/2020/05/12/chatbot-part-1.html
-https://github.com/huggingface/transformers/tree/main/examples
+Sources: <br>
+https://huggingface.co/blog/how-to-generate<br>
+https://towardsdatascience.com/make-your-own-rick-sanchez-bot-with-transformers-and-dialogpt-fine-tuning-f85e6d1f4e30<br>
+https://nathancooper.io/i-am-a-nerd/chatbot/deep-learning/gpt2/2020/05/12/chatbot-part-1.html<br>
+https://github.com/huggingface/transformers/tree/main/examples<br>
 
 Before starting, make sure you have these: Python 3.8+, pip, SQLite3, Git
 And make sure your terminal has Full Disk Access
