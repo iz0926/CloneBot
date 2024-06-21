@@ -11,9 +11,9 @@ https://github.com/huggingface/transformers/tree/main/examples<br>
 Before starting, make sure you have these: Python 3.8+, pip, SQLite3, Git
 And make sure your terminal has Full Disk Access
 
-Note: I recommend using a GPU for faster training and performance. I only have CPU and training took ages lol
-
 If you're using a mac, go to System Preferences > Security & Privacy > Privacy > Full Disk Access on the side bar. Click the lock icon to make changes and check the `Terminal` box. Click the lock icon again to save changes.
+
+Note: I recommend using a GPU for faster training and performance. I only have CPU and training took ages lol
 
 1) `git clone` 
 `cd` 
@@ -73,6 +73,7 @@ pip install -v --no-cache-dir ./
 ```
 python train.py
 ```
+6) Once training and testing is completed, you can chat with the bot by running: `python test_model.py`
 
 # How it works
 The chatbot in this project is fine-tuned using the DialoGPT model, which is a variant of GPT-2 (Generative Pre-trained Transformer 2). The model is pre-trained on a large dataset of conversational data, making it suitable for generating human-like responses in a dialogue context. Here's a bit about how the chatbot works and its architecture:
