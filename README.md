@@ -15,8 +15,8 @@ If you're using a mac, go to System Preferences > Security & Privacy > Privacy >
 
 Note: I recommend using a GPU for faster training and performance. I only have CPU and training took ages lol
 
-1) `git clone` 
-`cd` 
+1) `[git clone](https://github.com/iz0926/CloneBot.git)` 
+`cd CloneBot` 
 
 2) Extract Your iMessages to CSV
 The iMessages database is located at `~/Library/Messages/chat.db`. To access this database, open terminal on your mac and run: `sqlite3 ~/Library/Messages/chat.db`. 
