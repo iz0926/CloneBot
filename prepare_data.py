@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 # Load the dataset
-data = pd.read_csv('/Users/iriszhang/Desktop/messages_history.csv')
+data = pd.read_csv('put the path to your data csv file here')
 # df = df.sample(frac=0.1, random_state=42) 
 
 print(data.head())
