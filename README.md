@@ -92,3 +92,5 @@ Checkpoints: Model checkpoints are saved periodically.
 After this is done, we test by generating responses. We can use beam search to improve the quality of the generated responses by considering multiple potential outputs.
 Next, the generated token sequence is decoded back into text using the tokenizer. The chatbot can then output this text as its response.
 Once fine-tuning is complete, the model can be used to generate responses in a chatbot application. The trained model can understand and generate text with emojis.
+
+# Integrate with Facebook App
